@@ -2,7 +2,7 @@ function val = b_spline_boor(P,grado,U,t)
 % P -> conjunto de puntos de control
 % grado -> grado del B-Spline
 % U -> conjunto de nodos
-% t -> parámetro
+% t -> parÃ¡metro
 % X = C(t) -> valor de la curva B-Spline en el punto t
  
 grado = grado+1;

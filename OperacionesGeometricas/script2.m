@@ -3,7 +3,7 @@ L=25; N=2*L+1;
 X=ones(N,1)*[-L:L]/L;
 Y=[-L:L]'*ones(1,N)/L;
 Z=peaks(N)/4;
-% Creamos coordenadas homogéneas (cuarta fila llena de 1s)
+% Creamos coordenadas homogÃ©neas (cuarta fila llena de 1s)
 Row4=ones(N);
 XYZ=[ reshape(X,1,N*N) ; reshape(Y,1,N*N); reshape(Z,1,N*N); reshape(Row4,1,N*N)];
 % Creamos la matriz M (escalado/giro/translacion), la matriz identidad
@@ -20,8 +20,8 @@ v = cross(n,u);
 R = [u';v';n'];
 lastRow = [0,0,0,1];
 V = [R, -R*X0; lastRow];
-% Generamos matriz de proyección P
-ang = 15; % Angulo de visión.
+% Generamos matriz de proyecciÃ³n P
+ang = 15; % Angulo de visiÃ³n.
 relAspecto = 4/3; % Relacion de aspecto
 f1 = 15;
 n1 = 1;
@@ -31,7 +31,7 @@ P = [1/(relAspecto*tan(ang/2)),0,0,0;
     0,0,-1,0];
 % Calculamos producto Q
 Q = M*V*P;
-% aplicamos q a todas las coordenadas homogéneas
+% aplicamos q a todas las coordenadas homogÃ©neas
 Coords = Q * XYZ;
 % obtenemos las coordenadas 3D normalizadas
 Fila1Norm = Coords(1,:)./Coords(4,:);

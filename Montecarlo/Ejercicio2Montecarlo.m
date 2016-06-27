@@ -5,7 +5,7 @@ my = zeros(1,5);
 
 for i=1:5
     
-x = 0:0.1^i:0.5; % Cuantos m·s puntos m·s precisiÛn
+x = 0:0.1^i:0.5; % Cuantos m√°s puntos m√°s precisi√≥n
 y = sqrt(0.25-x.^2);
 z = trapz(x,y);
 
